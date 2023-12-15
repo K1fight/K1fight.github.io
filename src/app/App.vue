@@ -12,17 +12,17 @@ import './globals.css'
 
 
   </header>
-
-  <main class="flex text-center divide-x-4 divide-solid divide-blue-500 min-h-screen">
-  <div class="flex-1 w-1/3">
+  <!--class="flex text-center divide-x-4 divide-solid divide-blue-500 min-h-screen"-->
+  <main>
+  <div class="min-h-screen">
     <weather/>
   </div>
-  <div class="flex-1 w-1/3">
-    <york-email/>
-  </div>
-  <div class="flex-1 w-1/3">
-    <eclass/>
-  </div>
+<!--  <div class="flex-1 w-1/3">-->
+<!--    <york-email/>-->
+<!--  </div>-->
+<!--  <div class="flex-1 w-1/3">-->
+<!--    <eclass/>-->
+<!--  </div>-->
 
   </main>
 </template>

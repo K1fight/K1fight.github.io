@@ -6,6 +6,9 @@ export default defineComponent({
     return {
       city: 'North York',
       temperature: 7.14,
+      highest:10,
+      lowest:1,
+      daily:10
     };
   }
   // mounted() {
@@ -19,6 +22,9 @@ export default defineComponent({
   //     console.log(data);
   //     const tempInKelvin = data.current.temp;
   //     this.temperature = parseFloat((tempInKelvin - 273.15).toFixed(2));
+  //     this.highest = parseFloat((data.daily[0].temp.max-273.15).toFixed(2));
+  //     this.lowest = parseFloat((data.daily[0].temp.min-273.15).toFixed(2));
+  //     this.daily = data.daily;
   //   }
   // }
 });
@@ -32,17 +38,31 @@ export default defineComponent({
 <template>
   <header>
   </header>
-
   <main>
-    <h1 class="font-bold font-serif text-3xl">Weather</h1>
-    <h2 class="font-bold font-serif text-left">Temperature<span class="text-2xl text-red-500">{{temperature}}</span></h2>
-    <p  class="text-left">highest:</p>
-    <p>location:{{city}}</p>
+    <div class="bg-gradient-to-b from-[#87CEEB] to-[#00BFFF] min-h-screen">
+      <h1 class="font-pixel text-6xl text-left">Today's weather:</h1>
+      <h2 class="font-pixel text-4xl text-left">Temperature : <span class="font-pixel text-4xl text-red-500">{{temperature}}</span></h2>
+      <p  class="font-pixel text-4xl text-left">highest : <span class="font-pixel text-4xl text-red-500">{{highest}}</span></p>
+      <p  class="font-pixel text-4xl text-left">lowest : <span class="font-pixel text-4xl text-red-500">{{lowest}}</span></p>
+      <p  class="font-pixel text-4xl text-left">location : <span class="font-pixel text-4xl text-red-500">{{city}}</span></p>
+      <h2 class="font-pixel text-4xl text-left">Daily : <span class="font-pixel text-4xl text-red-500">{{daily}}</span></h2>
+      <img src="../resources/images/sun.png">
+      <img src="../resources/images/cloudy.png">
+      <img src="../resources/images/most_cloudy.png">
+      <img src="../resources/images/rain.png">
+      <img src="../resources/images/snow.png">
+    </div>
   </main>
 </template>
 
 <style scoped>
 @media screen {
-  height: 100vh;
+  height:100vh;
+}
+@font-face {
+  font-family: Pixel;
+  src: url('../resources/font/EnterCommand.ttf')format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 </style>
